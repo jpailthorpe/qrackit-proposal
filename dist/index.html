@@ -9,16 +9,27 @@
 	<body>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
+
+		<!-- Video -->
+		<div class="container-fluid" id="video-slide-bg">
+			<div class="container">
+				<div class="row-buffer"></div>
+			    <div class="row">
+					<h1 class="slide-title">What the Quack is Qrackit?</h1>
+			        <div class="col-12">
+			            <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+			                <iframe src="https://www.youtube.com/embed/AfjuNRjzZnE?rel=0&amp;autoplay=0&amp;wmode=opaque" width="500" height="306" class="video-filter video-youtube vf-afjunrjzzne" frameborder="0"></iframe>
+			            </div>
+			        </div>
+			    </div>
+			    <div class="row-buffer-lg"></div>
+			</div>
+		</div>
+
 		<div class="container">
-			<h1 class="slide-title">What is Qrackit?</h1>
-		    <div class="row">
-		        <div class="col-12">
-		            <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-		                <iframe src="https://www.youtube.com/embed/AfjuNRjzZnE?rel=0&amp;autoplay=0&amp;wmode=opaque" width="500" height="306" class="video-filter video-youtube vf-afjunrjzzne" frameborder="0"></iframe>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="slide-break"></div>
+
+			<!-- Mountain Range -->
+		    <div class="row-buffer"></div>
 		    <div class="row">
 	    		<h1 class="slide-title">The Mountain Range</h1>
 		    	<div class="col-lg-9 left-slide">
@@ -29,14 +40,21 @@
 		        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
 		        </div>
 		    </div>
-		    <div class="slide-break"></div>
+			
+			<!-- Mountain -->
+		    <div class="row-buffer"></div>
 		    <div class="row">
-		    	<div class="col-12">
-		    		<h1 class="slide-title">The Mountain</h1>
+	    		<h1 class="slide-title">The Mountain</h1>
+		    	<div class="col-12" id="relative-col">
+			    	<div class="overlay">
+			    		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p> -->
+			    	</div>
 			    	<img src="http://placehold.it/1000x650" class="img-responsive">
 		    	</div>
 		    </div>
-		    <div class="slide-break"></div>
+
+		    <!-- Basecamp -->
+		    <div class="row-buffer"></div>
 		    <div class="row">
 		    	<h1 class="slide-title">The Basecamp</h1>
 		        <div class="col-lg-3 slide-description">
@@ -48,49 +66,70 @@
 			    	<!-- <button class="button">click here</button> -->
 		    	</div>
 		    </div>
-		    <div class="slide-break"></div>
+
+		    <!-- Minigame -->
+		    <div class="row-buffer"></div>
 		    <div class="row">
+	    		<h1 class="slide-title">The Minigame</h1>
 		    	<div class="col-12">
-		    		<h1 class="slide-title">The Minigame</h1>
-			    	<img src="http://placehold.it/1000x650" class="img-responsive">
-		    	</div>
-		    </div>
-		    <div class="slide-break"></div>
-		    <div class="row">
-		    	<div class="col-12">
-		    		<h1 class="slide-title">Answering</h1>
-			    	<img src="http://placehold.it/1000x650" class="img-responsive">
-		    	</div>
-		    </div>
-		    <div class="slide-break"></div>
-		    <div class="row">
-		    	<div class="col-12">
-		    		<h1 class="slide-title">Evaluating</h1>
-			    	<img src="http://placehold.it/1000x650" class="img-responsive">
-		    	</div>
-		    </div>
-		    <div class="slide-break"></div>
-		    <div class="row">
-		    	<div class="col-12">
-		    		<h1 class="slide-title">The Mountain w/ Results</h1>
-			    	<img src="http://placehold.it/1000x650" class="img-responsive">
-		    	</div>
-		    </div>
-		    <div class="slide-break"></div>
-		    <div class="row">
-		    	<div class="col-12">
-		    		<h1 class="slide-title">The Mountain Range w/ Winner</h1>
-			    	<img src="http://placehold.it/1000x650" class="img-responsive">
-		    	</div>
-		    </div>
-		    <div class="slide-break"></div>
-		    <div class="row">
-		    	<div class="col-12">
-		    		<h1 class="slide-title">The Proposal</h1>
 			    	<img src="http://placehold.it/1000x650" class="img-responsive">
 		    	</div>
 		    </div>
 
+		    <!-- Answering -->
+		    <div class="row-buffer"></div>
+		    <div class="row">
+	    		<h1 class="slide-title">Answering</h1>
+		    	<div class="col-12">
+			    	<img src="http://placehold.it/1000x650" class="img-responsive">
+		    	</div>
+		    </div>
+
+		    <!-- Evaluating -->
+		    <div class="row-buffer"></div>
+		    <div class="row">
+	    		<h1 class="slide-title">Evaluating</h1>
+		    	<div class="col-12">
+			    	<img src="http://placehold.it/1000x650" class="img-responsive">
+		    	</div>
+		    </div>
+
+		    <!-- Mountain and Results -->
+		    <div class="row-buffer"></div>
+		    <div class="row">
+	    		<h1 class="slide-title">The Mountain w/ Results</h1>
+		    	<div class="col-12">
+			    	<img src="http://placehold.it/1000x650" class="img-responsive">
+		    	</div>
+		    </div>
+
+		    <!-- Mountain range and Winner -->
+		    <div class="row-buffer"></div>
+		    <div class="row">
+	    		<h1 class="slide-title">The Mountain Range w/ Winner</h1>
+		    	<div class="col-12">
+			    	<img src="http://placehold.it/1000x650" class="img-responsive">
+		    	</div>
+		    </div>
+
+		    <!-- Proposal -->
+		    <div class="row-buffer"></div>
+		    <div class="row">
+	    		<h1 class="slide-title">The Proposal</h1>
+		    	<div class="col-12">
+			    	<img src="http://placehold.it/1000x650" class="img-responsive">
+		    	</div>
+		    </div>
+		</div>
+
+	    <div class="row-buffer-lg"></div>
+	    <div class="container-fluid" id="footer-bg">
+	    	<div class="container">
+				<footer class="footer">
+					<h1>Footer</h1>
+					<p>some text (is a footer even necessary?)</p>
+				</footer>
+			</div>
 		</div>
 	</body>
 </html>
