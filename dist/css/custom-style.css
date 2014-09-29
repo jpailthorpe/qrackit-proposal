@@ -5,7 +5,24 @@ body {
 
 .slide-title {
 	text-align: center;
-	padding-top: 20px;
+	padding: 15px
+}
+
+.slide-description {
+	background-color: #ddd;
+	padding: 5px 15px;
+}
+
+.left-slide {
+	padding-left: 0;
+}
+
+.right-slide {
+	padding-right: 0;
+}
+
+.slide-break {
+	height: 30px;
 }
 
 /* CSS used here will be applied after bootstrap.css */
@@ -48,4 +65,18 @@ body {
   .container {
     width: 1000px;
   }
+  .left-slide {
+	padding-right: 15px;
+  }
+  .right-slide {
+  	padding-left: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .left-slide {
+	padding-right: 0px;
+  }
+  .right-slide {
+  	padding-left: 0px;
+  }	
 }
