@@ -12,17 +12,17 @@ body {
 	padding: 15px
 }
 
-.slide-description {
-	background-color: #ddd;
-	padding: 5px 15px;
-}
-
 .left-slide {
 	padding-left: 0;
 }
 
 .right-slide {
 	padding-right: 0;
+}
+
+.slide-description {
+	background-color: #ddd;
+	padding: 5px 15px;
 }
 
 .row-buffer {
@@ -33,6 +33,11 @@ body {
 	height: 120px;
 }
 
+.mobile-warning {
+	padding: 15px 5px 0;
+	text-align: center;
+}
+
 .footer {
 	padding: 60px 0;
 }
@@ -41,19 +46,18 @@ body {
 	background-color: #666;
 }
 
+#relative-col {
+	position: relative;
+}
+
 .overlay {
     background: url(http://lorempixel.com/310/310/cats/) center center no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 310px;
+	height: 310px;
 	z-index: 10;
-	pointer-events: none;
-}
-
-#relative-col {
-	position: relative;
 }
 
 /* CSS used here will be applied after bootstrap.css */
@@ -91,6 +95,10 @@ body {
   .container {
     width: 970px;
   }
+  .mobile-warning {
+  	display: none;
+  	visibility: hidden;
+  }	
 }
 @media (min-width: 1200px) {
   .container {
@@ -109,5 +117,5 @@ body {
   }
   .right-slide {
   	padding-left: 0px;
-  }	
+  }
 }
