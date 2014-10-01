@@ -62,14 +62,24 @@ body {
 .overlay {
 	position: relative;
 	z-index: 10;
+	display: none;
 }
 
 /* Message boxes */
+.animation-trigger {
+	position: absolute;
+	background: url(http://lorempixel.com/50/50/sports) top left no-repeat;
+	width: 50px;
+	height: 50px;
+	left: 475px;
+	top: 400px;
+}
+
 .message {
 	overflow: hidden;
     background: url(http://lorempixel.com/650/350/cats/) center center no-repeat;
 	margin: 0 auto;
-	top: 15px;
+	top: 0;
 	left: 0;
 	width: 650px;
 	height: 350px;
@@ -89,6 +99,27 @@ body {
 	margin-top: 20px;
 	width: 500px;
 	text-align: left;
+}
+
+.reply {
+	top: 20px;
+}
+
+#reply-avatar {
+	position: absolute;
+	background: url(http://lorempixel.com/75/75/sports/) top left no-repeat;
+	width: 75px;
+	height: 75px;
+	left: 130px;
+	top: 130px;
+}
+
+#reply-text {
+	position: absolute;
+	width: 450px;
+	text-align: left;
+	top: 135px;
+	left: 220px;
 }
 
 /* CSS used here will be applied after bootstrap.css */
