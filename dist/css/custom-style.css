@@ -52,74 +52,61 @@ body {
 
 .overlay-container {
 	position: absolute;
-	text-align: center;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 }
 
-.overlay {
-	position: relative;
-	z-index: 10;
-	display: none;
-}
-
 /* Message boxes */
-.animation-trigger {
-	position: absolute;
-	background: url(http://lorempixel.com/50/50/sports) top left no-repeat;
-	width: 50px;
-	height: 50px;
-	left: 475px;
-	top: 400px;
-}
-
-.message {
+.message-box {
 	overflow: hidden;
     background: url(http://lorempixel.com/650/350/cats/) center center no-repeat;
 	margin: 0 auto;
-	top: 0;
-	left: 0;
 	width: 650px;
 	height: 350px;
+	display: none;
 }
 
-#avatar {
-	position: absolute;
-	background: url(http://lorempixel.com/100/100/sports/) top left no-repeat;
-	margin: 15px;
+.question {
+	background: url(http://lorempixel.com/650/150/cats/) top left no-repeat;
+	width: 650px;
+	height: 150px;
+	padding: 25px;	
+}
+
+.question-avatar {
+	background: url(http://lorempixel.com/100/100/cats/) top left no-repeat;
 	width: 100px;
 	height: 100px;
+	float: left;
 }
 
-#text {
-	position: absolute;
-	margin-left: 130px;
-	margin-top: 20px;
+.question-text {
 	width: 500px;
-	text-align: left;
+	height: 100px;
+	float: right;
+	padding-left: 25px;
 }
 
-.reply {
-	top: 20px;
+.comment {
+	background: url(http://lorempixel.com/650/125/cats/) top left no-repeat;
+	width: 600px;
+	height: 125px;
+	margin-left: 50px;
+	padding: 25px;
+	display: none;
 }
 
-#reply-avatar {
-	position: absolute;
-	background: url(http://lorempixel.com/75/75/sports/) top left no-repeat;
+.comment-avatar {
+	background: url(http://lorempixel.com/75/75/cats/) top left no-repeat;
 	width: 75px;
 	height: 75px;
-	left: 130px;
-	top: 130px;
+	float: left;	
 }
 
-#reply-text {
-	position: absolute;
+.comment-text {
 	width: 450px;
-	text-align: left;
-	top: 135px;
-	left: 220px;
+	height: 75px;
+	float: right;
 }
 
 /* CSS used here will be applied after bootstrap.css */
