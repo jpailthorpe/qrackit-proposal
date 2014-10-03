@@ -57,6 +57,10 @@ body {
 }
 
 /* Message boxes */
+#message-col {
+	position: relative;
+}
+
 .message-box {
 	overflow: hidden;
     background: url(http://lorempixel.com/650/350/cats/) center center no-repeat;
@@ -107,6 +111,111 @@ body {
 	width: 450px;
 	height: 75px;
 	float: right;
+}
+
+/* Cairns */
+#cairn-col {
+	position: relative;
+}
+
+.rock {
+	background: url(http://lorempixel.com/50/50/cats/) top left no-repeat;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+/*Cairn 1*/
+#rock-1 {
+	left: 10%;
+	top: 60%;
+}
+
+#rock-2 {
+	left: 15%;
+	top: 60%;
+}
+
+#rock-3 {
+	left: 20%;
+	top: 60%;
+}
+
+#rock-4 {
+	left: 12%;
+	top: 55%;
+}
+
+#rock-5 {
+	left: 17%;
+	top: 55%;
+}
+
+#rock-6 {
+	left: 15%;
+	top: 50%;
+}
+
+/*Cairn 2*/
+#rock-7 {
+	left: 75%;
+	top: 60%;
+}
+
+#rock-8 {
+	left: 80%;
+	top: 60%;
+}
+
+#rock-9 {
+	left: 85%;
+	top: 60%;
+}
+
+#rock-10 {
+	left: 77%;
+	top: 55%;
+}
+
+#rock-11 {
+	left: 82%;
+	top: 55%;
+}
+
+#rock-12 {
+	left: 80%;
+	top: 50%;
+}
+
+/*Cairn 3*/
+#rock-13 {
+	left: 45%;
+	top: 80%;
+}
+
+#rock-14 {
+	left: 50%;
+	top: 80%;
+}
+
+#rock-15 {
+	left: 55%;
+	top: 80%;
+}
+
+#rock-16 {
+	left: 47%;
+	top: 75%;
+}
+
+#rock-17 {
+	left: 52%;
+	top: 75%;
+}
+
+#rock-18 {
+	left: 50%;
+	top: 70%;
 }
 
 /* CSS used here will be applied after bootstrap.css */
