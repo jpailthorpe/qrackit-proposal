@@ -3,13 +3,25 @@ body {
     height: 100%;
 }
 
+body {
+	background-color: #dcf4f7;
+}
+
+h1 {
+	font-size: 55px;
+}
+
+p {
+	font-size: 16px;
+}
+
 #video-slide-bg {
-	background-color: #ddd;
+	background-color: #98dde5;
 }
 
 .slide-title {
 	text-align: center;
-	padding: 15px
+	padding: 20px
 }
 
 .left-slide {
@@ -21,16 +33,16 @@ body {
 }
 
 .slide-description {
-	background-color: #ddd;
+	background-color: #ff9c00;
 	padding: 5px 15px;
 }
 
 .row-buffer {
-	height: 30px;
+	height: 90px;
 }
 
 .row-buffer-lg {
-	height: 120px;
+	height: 180px;
 }
 
 .mobile-warning {
