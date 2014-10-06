@@ -268,6 +268,9 @@ body {
   .right-slide {
   	padding-left: 15px;
   }
+  .show-col-on-shrink {
+	display: none;
+  }
 }
 @media (max-width: 1200px) {
   .left-slide {
@@ -275,5 +278,8 @@ body {
   }
   .right-slide {
   	padding-left: 0px;
+  }
+  .hide-col-on-shrink {
+	display: none;
   }
 }

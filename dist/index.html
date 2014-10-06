@@ -29,7 +29,7 @@
 				<div class="row-buffer"></div>
 				<div class="row">
 					<h3>
-						View this site on a tablet or desktop for the interactive experience!
+						View this site on a desktop or a landscape-oriented tablet for the interactive experience!
 					</h3>
 				</div>
 			</div>
@@ -45,6 +45,15 @@
 		        	<h1>This is a title</h1>
 		        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
 		        </div>
+		    </div>
+			
+			<!-- Team Page -->
+		    <div class="row-buffer"></div>
+		    <div class="row">
+	    		<h1 class="slide-title">The Team Page</h1>
+		    	<div class="col-12">
+			    	<img src="http://placehold.it/1000x650" class="img-responsive">
+		    	</div>
 		    </div>
 			
 			<!-- Mountain -->
@@ -82,14 +91,17 @@
 		    <div class="row-buffer"></div>
 		    <div class="row">
 		    	<h1 class="slide-title">The BaseQamp</h1>
-		        <div class="col-lg-3 slide-description">
+		        <div class="col-lg-3 slide-description hide-col-on-shrink">
 		        	<h1>This is a title</h1>
 		        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
 		        </div>
 		    	<div class="col-lg-9 right-slide">
 			    	<img src="http://placehold.it/1000x650" class="img-responsive">
-			    	<!-- <button class="button">click here</button> -->
 		    	</div>
+		    	<div class="col-lg-3 slide-description show-col-on-shrink">
+		        	<h1>This is a title</h1>
+		        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+		        </div>
 		    </div>
 
 		    <!-- Minigame -->
@@ -173,7 +185,8 @@
 		    	</div>
 		    </div>
 		</div>
-
+		
+		<!-- Footer -->
 	    <div class="row-buffer-lg"></div>
 	    <div class="container-fluid" id="footer-bg">
 	    	<div class="container">
@@ -190,9 +203,14 @@
     		$LAB
 			.script('js/jquery.js')
 			.script('js/bootstrap.js')
-			.script('js/interactive/main.js')
-    		.script('js/interactive/input.js')
-    		.script('js/interactive/messages.js')
+			.script('js/interactive/main.js').wait(function() {
+				var enableInteractive = $main.init();
+				if (enableInteractive) {
+					$LAB
+		    		.script('js/interactive/input.js')
+		    		.script('js/interactive/messages.js')
+		    	}
+			});
 		</script>
 	</body>
 </html>
