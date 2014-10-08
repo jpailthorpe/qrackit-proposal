@@ -14,6 +14,17 @@ var scrollElement = null,
 		$(this).attr('scrollTop', 0);
 	});
 
+	$('.downButton a').bind('click', function(event){
+		event.preventDefault();
+		var $this = $(this);
+		target = this.hash;
+		$target = $(target);
+
+		scrollElement.stop().animate({
+			scrollTop: $target.offset().top
+		}, 500);
+	});
+
 	w.on('resize', function () {
 		if (resizeTimer) {
 			clearTimeout(resizeTimer);
