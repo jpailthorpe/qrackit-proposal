@@ -1,1 +1,1 @@
-A site for the Qrackit proposal, containing a video and interactive walkthrough of a round.
+The Qrackit proposal website, containing a video and interactive walkthrough of a round.
