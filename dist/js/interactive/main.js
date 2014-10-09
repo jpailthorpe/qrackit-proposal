@@ -1,9 +1,8 @@
 var scrollElement = null,
 	w = null,
 	resizeTimer = null,
-	minHeight = 400,
-	height = 600,
-	wrapperHeight = 600;
+	minHeight = 550,
+	height = 600;
 
 // Main loop
 (function(){
@@ -67,10 +66,13 @@ var scrollElement = null,
 
 function resizeSections () {
 	var h = w.height();
+	if (w.width() < 600) { // Here's a hack that helps the content fit on mobile screens
+		minHeight = 480;
+	} else {
+		minHeight = 550;
+	}
 	height = h < minHeight ? minHeight : h;
-	wrapperHeight = h * 0.8;
-	$('.wrapper').css('height', wrapperHeight);
 	$('.row').css('height', height);
-	var offset = (height - wrapperHeight) * 0.5;
+	var offset = (height - minHeight) * 0.5;
 	$('.wrapper').css('padding-top', offset);
 }
