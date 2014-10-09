@@ -93,6 +93,23 @@ p {
 	top: 0px;
 }
 
+.upButton {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 20px;
+}
+
+.upButton a img {
+	text-decoration: none;
+	outline: none;
+}
+
+.upButton a img {
+ 	position: relative;
+ 	top: 0px 	
+}
+
 #section1 {
 	background-color: #dcf4f7;	
 }
@@ -142,7 +159,10 @@ p {
 	padding: 60px 0;
 }
 
-#footer-bg {
+/*#footer-bg {
+	background-color: #666;
+}*/
+#footer-section {
 	background-color: #666;
 }
 

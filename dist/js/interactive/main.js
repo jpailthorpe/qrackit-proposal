@@ -26,6 +26,16 @@ var scrollElement = null,
 		}, 500);
 	});
 
+	$('.upButton a').bind('click', function(event){
+		event.preventDefault();
+		// var $this = $(this);
+		// target = this.hash;
+		// $target = $(target);
+		scrollElement.stop().animate({
+			scrollTop: 0
+		}, 1000);
+	});
+
 	w.on('resize', function () {
 		if (resizeTimer) {
 			clearTimeout(resizeTimer);
