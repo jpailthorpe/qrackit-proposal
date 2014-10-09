@@ -1,8 +1,9 @@
 var scrollElement = null,
 	w = null,
 	resizeTimer = null,
-	minHeight = 400;
-	height = 600;
+	minHeight = 400,
+	height = 600,
+	wrapperHeight = 600;
 
 // Main loop
 (function(){
@@ -67,10 +68,9 @@ var scrollElement = null,
 function resizeSections () {
 	var h = w.height();
 	height = h < minHeight ? minHeight : h;
-	// console.log(height);
+	wrapperHeight = h * 0.8;
+	$('.wrapper').css('height', wrapperHeight);
 	$('.row').css('height', height);
-	var offset = (height - 600) * 0.5;
-	console.log(height, offset);
+	var offset = (height - wrapperHeight) * 0.5;
 	$('.wrapper').css('padding-top', offset);
-	// $('.wrapper').css('padding-bottom', offset * 0.25);
 }
