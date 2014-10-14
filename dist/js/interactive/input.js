@@ -3,6 +3,8 @@
 
 	var input = $main.input = {
 
+		imageHeight: 0,
+		imageScale: 0,
 		showingMessage: false,
 		showingComment1: false,
 		showingComment2: false,
@@ -35,6 +37,8 @@
 		],
 
 		init: function() {
+			imageHeight = $('.overlay-container').height();
+			imageScale = imageHeight / 650;
 			console.log('input ready');
 		}
 	};
@@ -64,21 +68,20 @@
 			var messagebox = $('.message-box');
 			var comment1 = $('#comment-1');
 			var comment2 = $('#comment-2');
-			var endHeight = messagebox.height();
-			console.log(endHeight);
 			if (!input.showingMessage) {
 				messagebox.show();
 				messagebox.css('height', 0);
-				// messagebox.css('margin-top', endHeight);
+				// messagebox.css('margin-top', imageHeight * 0.5);
 				messagebox.css('opacity', 1);
 				messagebox.animate({
 					// marginTop: 0,
-					height: endHeight
+					height: imageHeight
 				}, 1000, function() {
 					input.showingMessage = true;
 				});
 			} else {
 				if (!input.showingComment1) {
+					console.log('hi');
 					_slideComment(comment1, function() {
 						input.showingComment1 = true;
 					});

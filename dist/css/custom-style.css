@@ -45,7 +45,6 @@ p {
 	position: absolute;
 	width: 100%;
 	height: 600px;
-	/*height: 480px;*/
 }
 
 .content-title {
@@ -58,11 +57,6 @@ p {
 	height: 480px;
 	margin: 0 auto;
 }
-
-/*.content > h1 {
-	margin-top: 25px;
-	margin-bottom: 25px;
-}*/
 
 .content .content-image {
 	float: left;
@@ -151,18 +145,10 @@ p {
 	background-color: #fff;
 }
 
-/*.mobile-warning {
-	padding: 15px 5px 0;
-	text-align: center;
-}
-*/
 .footer {
 	padding: 60px 0;
 }
 
-/*#footer-bg {
-	background-color: #666;
-}*/
 #footer-section {
 	background-color: #666;
 }
@@ -188,6 +174,8 @@ p {
 	overflow: hidden;
 	margin: 0 auto;
 	display: none;
+	position: absolute;
+	width: 100%;
 }
 
 .speech-bubble {
@@ -195,24 +183,38 @@ p {
 }
 
 .question {
+	/*background: url(http://lorempixel.com/650/150/cats/) top left no-repeat;*/
+	/*width: 650px;*/
+	/*height: 150px;*/
+	/*padding: 25px;*/
+	position: absolute;
+	margin: 0 auto;
+	top: 0;
+	width: 70%;
+	height: 107%;
+	left: 15%;	
+	padding: 1%
+}
+
+.question-background {
 	background: url(http://lorempixel.com/650/150/cats/) top left no-repeat;
-	width: 650px;
-	height: 150px;
-	padding: 25px;	
 }
 
 .question-avatar {
 	background: url(http://lorempixel.com/100/100/cats/) top left no-repeat;
-	width: 100px;
-	height: 100px;
+	/*width: 100px;*/
+	/*height: 100px;*/
 	float: left;
+	width: 15%;
+	height: 15%;
 }
 
 .question-text {
-	width: 500px;
-	height: 100px;
+	/*width: 500px;*/
+	/*height: 100px;*/
 	float: right;
-	padding-left: 25px;
+	/*padding-left: 25px;*/
+	width: 80%;
 }
 
 .comment {
@@ -240,11 +242,6 @@ p {
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 	max-height: 480px;
 }
-
-/*.img-responsive {
-	max-height: 480px;
-	margin: 0 auto;
-}*/
 
 /* Cairns */
 #cairn-col {
@@ -439,10 +436,6 @@ p {
   p {
   	font-size: 14px;
   }
-  /*.mobile-warning {
-  	display: none;
-  	visibility: hidden;
-  }*/
 }
 @media (min-width: 1200px) {
   h1 {

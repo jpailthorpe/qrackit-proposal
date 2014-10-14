@@ -87,5 +87,8 @@ function resizeSections () {
 	if (minHeight == defaultMinHeight) {
 		var offset = (height - minHeight) * 0.5;
 		$('.wrapper').css('padding-top', offset);
+	} else {
+		var vidOffset = (height - minHeight) * 0.67;	// ugh here's another hack that kind of centers the vid
+		$('#video-content').css('padding-top', vidOffset);
 	}
 }
