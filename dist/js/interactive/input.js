@@ -60,18 +60,20 @@
 			}, 200 + Math.random() * 500);
 		}
 
-		$BODY.on('click', '#message-col', function(e) {
+		$BODY.on('click', '#anim-message', function(e) {
 			var messagebox = $('.message-box');
 			var comment1 = $('#comment-1');
 			var comment2 = $('#comment-2');
+			var endHeight = messagebox.height();
+			console.log(endHeight);
 			if (!input.showingMessage) {
 				messagebox.show();
 				messagebox.css('height', 0);
-				messagebox.css('margin-top', 350);
+				// messagebox.css('margin-top', endHeight);
 				messagebox.css('opacity', 1);
 				messagebox.animate({
-					marginTop: 15,
-					height: 350
+					// marginTop: 0,
+					height: endHeight
 				}, 1000, function() {
 					input.showingMessage = true;
 				});

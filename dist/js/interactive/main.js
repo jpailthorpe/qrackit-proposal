@@ -1,6 +1,8 @@
 var scrollElement = null,
 	w = null,
 	resizeTimer = null,
+	mobileMinHeight = 420,
+	defaultMinHeight = 550,
 	minHeight = 550,
 	height = 600;
 
@@ -20,7 +22,7 @@ var scrollElement = null,
 		var $this = $(this);
 		target = this.hash;
 		$target = $(target);
-
+		console.log($BODY);
 		scrollElement.stop().animate({
 			scrollTop: $target.offset().top
 		}, 500);
@@ -28,9 +30,6 @@ var scrollElement = null,
 
 	$('.upButton a').bind('click', function(event){
 		event.preventDefault();
-		// var $this = $(this);
-		// target = this.hash;
-		// $target = $(target);
 		scrollElement.stop().animate({
 			scrollTop: 0
 		}, 1000);
@@ -57,13 +56,14 @@ var scrollElement = null,
 	window.$main = {
 
 		init: function() {
-			var enableInteractive = $('.mobile-warning').css('display');
+			/*var enableInteractive = $('.mobile-warning').css('display');
 			if (enableInteractive == 'none') {
 				_setupGlobals();
 			} else {
 				return false;
-			}
-			console.log("main ready");
+			}*/
+			_setupGlobals();
+			console.log('main ready');
 			return true;
 		}
 	};
@@ -77,12 +77,15 @@ var scrollElement = null,
 function resizeSections () {
 	var h = w.height();
 	if (w.width() < 600) { // Here's a hack that helps the content fit on mobile screens
-		minHeight = 480;
+		minHeight = mobileMinHeight;
 	} else {
-		minHeight = 550;
+		minHeight = defaultMinHeight;
 	}
 	height = h < minHeight ? minHeight : h;
 	$('.row').css('height', height);
-	var offset = (height - minHeight) * 0.5;
-	$('.wrapper').css('padding-top', offset);
+	
+	if (minHeight == defaultMinHeight) {
+		var offset = (height - minHeight) * 0.5;
+		$('.wrapper').css('padding-top', offset);
+	}
 }
