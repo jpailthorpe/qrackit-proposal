@@ -166,7 +166,7 @@ p {
 }
 
 /* Message boxes */
-#anim-message {
+.anim-message {
 	cursor: pointer;
 }
 

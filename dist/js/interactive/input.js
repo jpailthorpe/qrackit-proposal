@@ -5,9 +5,9 @@
 
 		imageHeight: 0,
 		imageScale: 0,
-		showingMessage: false,
-		showingComment1: false,
-		showingComment2: false,
+		showingMessage: [false, false],
+		showingComment1: [false, false],
+		showingComment2: [false, false],
 
 		rockPositions: [
 
@@ -65,28 +65,37 @@
 			}, 200 + Math.random() * 500);
 		}
 
-		$BODY.on('click touchend', '#anim-message', function(e) {
-			// $('#anim-message').css('display', 'none');
-			var messagebox = $('.message-box');
-			var comment1 = $('#comment-1');
-			var comment2 = $('#comment-2');
-			if (!input.showingMessage) {
+		$BODY.on('click touchend', '#anim-message-1', function(e) {
+			_animateSpeechBubble (1);
+		});
+
+		$BODY.on('click touchend', '#anim-message-2', function(e) {
+			_animateSpeechBubble (2);
+		});
+
+		function _animateSpeechBubble (boxNum) {
+			var index = boxNum - 1;
+			var id = '#anim-message-' + boxNum;
+			var messagebox = $(id + ' .message-box');
+			var comment1 = $(id + ' #comment-1');
+			var comment2 = $(id + ' #comment-2');
+			if (!input.showingMessage[index]) {
 				messagebox.show();
 				messagebox.css('height', 0);
 				messagebox.css('opacity', 1);
 				messagebox.animate({
 					height: imageHeight
 				}, 1000, function() {
-					input.showingMessage = true;
+					input.showingMessage[index] = true;
 				});
 			} else {
-				if (!input.showingComment1) {
+				if (!input.showingComment1[index]) {
 					_slideComment(comment1, function() {
-						input.showingComment1 = true;
+						input.showingComment1[index] = true;
 					});
-				} else if (!input.showingComment2) {
+				} else if (!input.showingComment2[index]) {
 					_slideComment(comment2, function() {
-						input.showingComment2 = true;
+						input.showingComment2[index] = true;
 					});
 				} else {
 					messagebox.animate({
@@ -94,13 +103,13 @@
 					}, 500, function() {
 						comment1.hide();
 						comment2.hide();
-						input.showingMessage = false;
-						input.showingComment1 = false;
-						input.showingComment2 = false;
+						input.showingMessage[index] = false;
+						input.showingComment1[index] = false;
+						input.showingComment2[index] = false;
 					});
 				}
 			}
-		});
+		}
 
 		function _slideComment(com, callback) {
 			var comment = $(com);
