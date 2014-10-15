@@ -166,6 +166,10 @@ p {
 }
 
 /* Message boxes */
+#anim-message {
+	cursor: pointer;
+}
+
 #message-col {
 	position: relative;
 }
@@ -196,7 +200,6 @@ p {
 	position: absolute;
 	width: 97%;
 	height: 97%;
-	/*overflow: hidden;*/
 }
 
 .avatar {

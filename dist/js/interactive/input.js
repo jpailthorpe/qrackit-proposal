@@ -47,7 +47,8 @@
 	_bindEvents();
 
 	function _bindEvents() {
-		$BODY.on('click', '#cairn-col', function(e) {
+
+		$BODY.on('touchend click', '#cairn-col', function(e) {
 			var col = $('#cairn-col');
 			for (var i = 0; i < input.rockPositions.length; i ++) {
 				_moveRock(i + 1, col.width(), col.height());
@@ -64,17 +65,16 @@
 			}, 200 + Math.random() * 500);
 		}
 
-		$BODY.on('click', '#anim-message', function(e) {
+		$BODY.on('click touchend', '#anim-message', function(e) {
+			// $('#anim-message').css('display', 'none');
 			var messagebox = $('.message-box');
 			var comment1 = $('#comment-1');
 			var comment2 = $('#comment-2');
 			if (!input.showingMessage) {
 				messagebox.show();
 				messagebox.css('height', 0);
-				// messagebox.css('margin-top', imageHeight * 0.5);
 				messagebox.css('opacity', 1);
 				messagebox.animate({
-					// marginTop: 0,
 					height: imageHeight
 				}, 1000, function() {
 					input.showingMessage = true;
@@ -105,10 +105,8 @@
 		function _slideComment(com, callback) {
 			var comment = $(com);
 			comment.show();
-			// comment.css('margin-top', 200);
 			comment.css('margin-left', 1000 * imageScale);
 			comment.animate({
-				//marginTop: 0
 				marginLeft:	0
 			}, 1000, function() {
 				callback();
