@@ -81,7 +81,6 @@
 				});
 			} else {
 				if (!input.showingComment1) {
-					console.log('hi');
 					_slideComment(comment1, function() {
 						input.showingComment1 = true;
 					});
@@ -106,9 +105,11 @@
 		function _slideComment(com, callback) {
 			var comment = $(com);
 			comment.show();
-			comment.css('margin-top', 200);
+			// comment.css('margin-top', 200);
+			comment.css('margin-left', 1000 * imageScale);
 			comment.animate({
-				marginTop: 0
+				//marginTop: 0
+				marginLeft:	0
 			}, 1000, function() {
 				callback();
 			});

@@ -189,19 +189,21 @@ p {
 	left: 15%;
 	padding: 1%;
 	top: 0;
+	overflow: hidden;
 }
 
 .bubble-content {
 	position: absolute;
 	width: 97%;
 	height: 97%;
+	/*overflow: hidden;*/
 }
 
 .avatar {
 	float: left;
 }
 
-#question {
+.question {
 	top: 2%;
 }
 
@@ -220,8 +222,14 @@ p {
 	width: 80%;
 }
 
-#comment {
-	top: 18%;
+#comment-1 {
+	top: 20%;
+	display: none;
+}
+
+#comment-2 {
+	top: 34%;
+	display: none;
 }
 
 #comment-avatar {
