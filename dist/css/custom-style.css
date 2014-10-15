@@ -182,60 +182,57 @@ p {
 	max-width: 100%;
 }
 
-.question {
-	/*background: url(http://lorempixel.com/650/150/cats/) top left no-repeat;*/
-	/*width: 650px;*/
-	/*height: 150px;*/
-	/*padding: 25px;*/
+.bubble-wrapper {
 	position: absolute;
-	margin: 0 auto;
-	top: 0;
 	width: 70%;
 	height: 107%;
-	left: 15%;	
-	padding: 1%
+	left: 15%;
+	padding: 1%;
+	top: 0;
+}
+
+.bubble-content {
+	position: absolute;
+	width: 97%;
+	height: 97%;
+}
+
+.avatar {
+	float: left;
+}
+
+#question {
+	top: 2%;
 }
 
 .question-background {
 	background: url(http://lorempixel.com/650/150/cats/) top left no-repeat;
 }
 
-.question-avatar {
+#question-avatar {
 	background: url(http://lorempixel.com/100/100/cats/) top left no-repeat;
-	/*width: 100px;*/
-	/*height: 100px;*/
-	float: left;
 	width: 15%;
 	height: 15%;
 }
 
 .question-text {
-	/*width: 500px;*/
-	/*height: 100px;*/
 	float: right;
-	/*padding-left: 25px;*/
 	width: 80%;
 }
 
-.comment {
-	background: url(http://lorempixel.com/650/125/cats/) top left no-repeat;
-	width: 600px;
-	height: 125px;
-	margin-left: 50px;
-	padding: 25px;
-	display: none;
+#comment {
+	top: 18%;
 }
 
-.comment-avatar {
+#comment-avatar {
 	background: url(http://lorempixel.com/75/75/cats/) top left no-repeat;
-	width: 75px;
-	height: 75px;
-	float: left;	
+	width: 10%;
+	height: 10%;
+	margin-left: 5%;
 }
 
 .comment-text {
-	width: 450px;
-	height: 75px;
+	width: 80%;
 	float: right;
 }
 
@@ -386,6 +383,9 @@ p {
   p {
   	font-size: 12px;
   }
+  .bubble-wrapper {
+  	font-size: 8px;
+  }
   .content .content-image {
   	width: 100% !important;
   }
@@ -436,6 +436,9 @@ p {
   p {
   	font-size: 14px;
   }
+  .bubble-wrapper {
+  	font-size: 12px;
+  }
 }
 @media (min-width: 1200px) {
   h1 {
@@ -449,6 +452,9 @@ p {
   }
   p {
   	font-size: 16px;
+  }
+  .bubble-wrapper {
+  	font-size: 14px;
   }
   .show-col-on-shrink {
 	display: none;
