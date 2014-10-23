@@ -48,8 +48,8 @@
 
 	function _bindEvents() {
 
-		$BODY.on('touchend click', '#cairn-col', function(e) {
-			var col = $('#cairn-col');
+		$BODY.on('touchend click', '#cairns-container', function(e) {
+			var col = $('#cairns-container');
 			for (var i = 0; i < input.rockPositions.length; i ++) {
 				_moveRock(i + 1, col.width(), col.height());
 			}
@@ -65,17 +65,17 @@
 			}, 200 + Math.random() * 500);
 		}
 
-		$BODY.on('click touchend', '#anim-message-1', function(e) {
+		$BODY.on('click touchend', '#content-interactive-1', function(e) {
 			_animateSpeechBubble (1);
 		});
 
-		$BODY.on('click touchend', '#anim-message-2', function(e) {
+		$BODY.on('click touchend', '#content-interactive-2', function(e) {
 			_animateSpeechBubble (2);
 		});
 
 		function _animateSpeechBubble (boxNum) {
 			var index = boxNum - 1;
-			var id = '#anim-message-' + boxNum;
+			var id = '#content-interactive-' + boxNum;
 			var messagebox = $(id + ' .message-box');
 			var comment1 = $(id + ' #comment-1');
 			var comment2 = $(id + ' #comment-2');

@@ -166,7 +166,7 @@ p {
 }
 
 /* Message boxes */
-.anim-message {
+.content-interactive {
 	cursor: pointer;
 }
 
@@ -252,14 +252,12 @@ p {
 }
 
 /* Cairns */
-#cairn-col {
-	position: relative;
-}
-
 .rock {
 	background: url(http://lorempixel.com/50/50/cats/) top left no-repeat;
-	width: 50px;
-	height: 50px;
+	/*width: 50px;
+	height: 50px;*/
+	width: 5%;
+	height: 8%;
 	position: absolute;
 }
 
