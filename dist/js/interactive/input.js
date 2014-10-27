@@ -8,38 +8,49 @@
 		showingMessage: [false, false],
 		showingComment1: [false, false],
 		showingComment2: [false, false],
+		breakPoint: 7,
+		animateRocks: true,
 
 		rockPositions: [
 
 			// Cairn 1
-			[0.1, 0.6],
-			[0.15, 0.6],
-			[0.2, 0.6],
-			[0.12, 0.55],
-			[0.17, 0.55],
-			[0.15, 0.5],
+			[0.125, 0.0],
+			[0.125, 0.0],
+			[0.125, 0.0],
+			[0.125, 0.0],
+			[0.125, 0.0],
+			[0.125, 0.0],
+			[0.125, 0.0],
 
 			// Cairn 2
-			[0.75, 0.6],
-			[0.8, 0.6],
-			[0.85, 0.6],
-			[0.77, 0.55],
-			[0.82, 0.55],
-			[0.8, 0.5],
+			[0.545, 0.0],
+			[0.545, 0.0],
+			[0.545, 0.0],
+			[0.545, 0.0],
+			[0.545, 0.0],
+			[0.545, 0.0]
 
-			// Cairn 3
-			[0.45, 0.8],
-			[0.5, 0.8],
-			[0.55, 0.8],
-			[0.47, 0.75],
-			[0.52, 0.75],
-			[0.5, 0.7]
 		],
 
 		init: function() {
+			input.setRockPositions();
 			imageHeight = $('.overlay-container').height();
 			imageScale = imageHeight / 650;
 			console.log('input ready');
+		},
+
+		setRockPositions: function() {
+			var lStartY = 0.075,
+				rStartY = 0.175,
+				sep = 0.055;
+			for (var i = 0; i < input.breakPoint; i ++) {
+				input.rockPositions[i][0] = 0.125;
+				input.rockPositions[i][1] = lStartY + (sep * i);
+			}
+			for (var i = input.breakPoint; i < 13; i ++) {
+				input.rockPositions[i][0] = 0.545;
+				input.rockPositions[i][1] = rStartY + (sep * (i - (input.breakPoint - 1)));
+			}
 		}
 	};
 
@@ -49,21 +60,21 @@
 	function _bindEvents() {
 
 		$BODY.on('touchend click', '#cairns-container', function(e) {
-			var col = $('#cairns-container');
-			for (var i = 0; i < input.rockPositions.length; i ++) {
-				_moveRock(i + 1, col.width(), col.height());
-			}
+			if (input.animateRocks) {
+				var col = $('#cairns-container');
+				var rockCount = input.rockPositions.length;
+				for (var i = 0; i < input.breakPoint; i ++) {
+					_moveRock(i + 1, col.width(), col.height(), 300 + ((input.breakPoint - i) * 250));
+				}
+				for (var i = input.breakPoint; i < rockCount; i ++) {
+					_moveRock(i + 1, col.width(), col.height(), 300 + ((rockCount - i) * 250));	
+				}
+				input.animateRocks = false;
+				setTimeout(function(){
+					input.animateRocks = true;
+				}, 300 + ((rockCount - 2) * 250));
+			} 
 		});
-
-		function _moveRock(index, divWidth, divHeight) {
-			var rock = $('#rock-' + index);
-			rock.css('top', divHeight * 0.5);
-			rock.css('left', divWidth * 0.5);
-			rock.animate({
-				left: divWidth * input.rockPositions[index - 1][0],
-				top: divHeight * input.rockPositions[index - 1][1]
-			}, 200 + Math.random() * 500);
-		}
 
 		$BODY.on('click touchend', '#content-interactive-1', function(e) {
 			_animateSpeechBubble (1);
@@ -111,6 +122,15 @@
 			}
 		}
 
+		function _moveRock(index, divWidth, divHeight, speed) {
+			var rock = $('#rock-' + index);
+			rock.css('top', -divHeight * 0.5);
+			rock.css('left', divWidth * input.rockPositions[index - 1][0]);
+			rock.animate({
+				top: divHeight * input.rockPositions[index - 1][1]
+			}, speed);
+		}
+
 		function _slideComment(com, callback) {
 			var comment = $(com);
 			comment.show();
@@ -122,5 +142,4 @@
 			});
 		}
 	}
-
 })();

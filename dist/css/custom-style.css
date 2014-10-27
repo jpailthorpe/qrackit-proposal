@@ -48,8 +48,13 @@ p {
 }
 
 .content-title {
-	text-align: center;
+	text-align: left;
 	padding-bottom: 20px;
+	margin: 10px auto;
+}
+
+.content-header {
+	margin-top: 0;
 }
 
 .content {
@@ -163,6 +168,7 @@ p {
 	height: 100%;
 	bottom: 0px;
 	left: 0px;
+	overflow: hidden;
 }
 
 /* Message boxes */
@@ -253,105 +259,65 @@ p {
 
 /* Cairns */
 .rock {
-	background: url(http://lorempixel.com/50/50/cats/) top left no-repeat;
-	/*width: 50px;
-	height: 50px;*/
-	width: 5%;
-	height: 8%;
+	width: 35%;
+	height: 35%;
 	position: absolute;
+	top: -50%;
 }
 
 /*Cairn 1*/
 #rock-1 {
-	left: 10%;
-	top: 60%;
+	left: 12.5%;
 }
 
 #rock-2 {
-	left: 15%;
-	top: 60%;
+	left: 12.5%;
 }
 
 #rock-3 {
-	left: 20%;
-	top: 60%;
+	left: 12.5%;
 }
 
 #rock-4 {
-	left: 12%;
-	top: 55%;
+	left: 12.5%;
 }
 
 #rock-5 {
-	left: 17%;
-	top: 55%;
+	left: 12.5%;
 }
 
 #rock-6 {
-	left: 15%;
-	top: 50%;
+	left: 12.5%;
+}
+
+#rock-7 {
+	left: 12.5%;
 }
 
 /*Cairn 2*/
-#rock-7 {
-	left: 75%;
-	top: 60%;
-}
 
 #rock-8 {
-	left: 80%;
-	top: 60%;
+	left: 54.5%;
 }
 
 #rock-9 {
-	left: 85%;
-	top: 60%;
+	left: 54.5%;
 }
 
 #rock-10 {
-	left: 77%;
-	top: 55%;
+	left: 54.5%;
 }
 
 #rock-11 {
-	left: 82%;
-	top: 55%;
+	left: 54.5%;
 }
 
 #rock-12 {
-	left: 80%;
-	top: 50%;
+	left: 54.5%;
 }
 
-/*Cairn 3*/
 #rock-13 {
-	left: 45%;
-	top: 80%;
-}
-
-#rock-14 {
-	left: 50%;
-	top: 80%;
-}
-
-#rock-15 {
-	left: 55%;
-	top: 80%;
-}
-
-#rock-16 {
-	left: 47%;
-	top: 75%;
-}
-
-#rock-17 {
-	left: 52%;
-	top: 75%;
-}
-
-#rock-18 {
-	left: 50%;
-	top: 70%;
+	left: 54.5%;
 }
 
 .flex-video {
@@ -403,7 +369,11 @@ p {
   	padding: 0 10px;
   }
   .content-title {
+  	width: 100% !important;
   	padding: 0 10px;
+  }
+  .content-header {
+  	margin-top: 10px;
   }
   .downButton a img {
   	width: 30px;
@@ -430,6 +400,12 @@ p {
   	clear: both;
   	width: 70%;
   	margin: 0 auto;
+  }
+  .content-title {
+  	width: 70%;
+  }
+  .content-header {
+  	margin-top: 20px;
   }
 }
 @media (min-width: 992px) {
