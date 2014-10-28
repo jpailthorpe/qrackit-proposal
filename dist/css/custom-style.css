@@ -1,21 +1,23 @@
+@font-face {
+	font-family: "Avenir";
+	src: url("../fonts/avenir/Avenir.ttc");
+}
+
 html,
 body {
     height: 100%;
+	font-family: 'Avenir', sans-serif;
 }
 
 body {
 	background-color: #dcf4f7;
 }
-
 h1 {
 	font-size: 48px;
-}
-h1, h2, h3 {
-	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
 }
 p {
 	font-size: 16px;
-	font-family: 'Pontano Sans', sans-serif;
 }
 
 #video-slide-bg {
@@ -78,9 +80,6 @@ p {
 
 .content-image-footer {
 	position: relative;
-	/*margin: 0 auto;*/
-	/*float: none;
-	max-width: 600px;*/
 	float: left;
 	width: 30%;
 	max-width: none;
@@ -88,8 +87,6 @@ p {
 
 .content-text-footer {
 	position: relative;
-	/*margin: 0 auto;
-	max-width: 600px;*/
 	max-width: none;
 }
 
