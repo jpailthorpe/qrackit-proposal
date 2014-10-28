@@ -1,7 +1,7 @@
 var scrollElement = null,
 	w = null,
 	resizeTimer = null,
-	mobileMinHeight = 420,
+	mobileMinHeight = 520,
 	defaultMinHeight = 550,
 	minHeight = 550,
 	height = 600;
