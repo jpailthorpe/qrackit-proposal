@@ -76,6 +76,34 @@ p {
 	margin-left: 20px;
 }
 
+.content-image-footer {
+	position: relative;
+	/*margin: 0 auto;*/
+	/*float: none;
+	max-width: 600px;*/
+	float: left;
+	width: 30%;
+	max-width: none;
+}
+
+.content-text-footer {
+	position: relative;
+	/*margin: 0 auto;
+	max-width: 600px;*/
+	max-width: none;
+}
+
+#content-footer {
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#content-footer a {
+	color: white;
+	text-decoration: none;
+}
+
 .downButton {
 	position: absolute;
 	text-align: center;
@@ -156,6 +184,14 @@ p {
 
 #footer-section {
 	background-color: #666;
+}
+
+.organization {
+	height: 30%;
+}
+
+.organization .logo {
+	margin-bottom: 10px;
 }
 
 #relative-col {
@@ -406,6 +442,17 @@ p {
   }
   .content-header {
   	margin-top: 20px;
+  }
+  .organization {
+  	margin: 0 auto;
+  	max-width: 600px;
+  }
+  .content-image-footer {
+  	float: none;
+  	max-width: 600px;
+  }
+  .content-text-footer {
+  	max-width: 600px;
   }
 }
 @media (min-width: 992px) {
