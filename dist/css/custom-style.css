@@ -14,7 +14,7 @@
 html,
 body {
     height: 100%;
-	font-family: 'Avenir', sans-serif;
+	font-family: 'Avenir', 'Lato', sans-serif;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 h1 {
 	font-size: 48px;
 	font-weight: bold;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'Avenir Next', 'Lato', sans-serif;
 }
 p {
 	font-size: 16px;
@@ -190,6 +190,39 @@ p {
 
 #footer-section {
 	background-color: #666;
+}
+
+.social-media {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.social-media a {
+	outline: 0;
+	margin-right: 20px;
+}
+
+.social-media a img {
+	height: 40px;
+}
+
+.blue {
+	color: #98dde5;
+	font-weight: bold;
+}
+
+.blue a {
+	outline: 0;
+	border: none;
+	color: #98dde5 !important;
+}
+
+.blue a:hover {
+	color: #fff !important;
+}
+
+#content-footer p {
+	margin-bottom: 4px;
 }
 
 .organization {
