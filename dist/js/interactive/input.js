@@ -60,6 +60,7 @@
 	function _bindEvents() {
 
 		$('.wrapper-cairns').waypoint(function(){
+			_resetSpeechBubble(2);
 			setTimeout(function() {
 				if (input.animateRocks) {
 					var col = $('#cairns-container');
@@ -87,50 +88,64 @@
 			input.animateRocks = true;
 		});
 
-		$BODY.on('click touchend', '#content-interactive-1', function(e) {
+		$('.wrapper-question').waypoint(function() {
 			_animateSpeechBubble (1);
 		});
 
-		$BODY.on('click touchend', '#content-interactive-2', function(e) {
+		$('.wrapper-answer').waypoint(function() {
 			_animateSpeechBubble (2);
 		});
 
+		$('.wrapper-mountain').waypoint(function() {
+			_resetSpeechBubble(1);
+		});
+
+		$('.wrapper-minigame').waypoint(function() {
+			_resetSpeechBubble(1);
+			_resetSpeechBubble(2);
+		});
+
 		function _animateSpeechBubble (boxNum) {
+			
 			var index = boxNum - 1;
+			if (input.showingMessage[index]) return;
+			input.showingMessage[index] = true;
+
 			var id = '#content-interactive-' + boxNum;
 			var messagebox = $(id + ' .message-box');
 			var comment1 = $(id + ' #comment-1');
 			var comment2 = $(id + ' #comment-2');
-			if (!input.showingMessage[index]) {
+			
+			setTimeout(function(){
 				messagebox.show();
 				messagebox.css('height', 0);
 				messagebox.css('opacity', 1);
 				messagebox.animate({
 					height: imageHeight
-				}, 1000, function() {
-					input.showingMessage[index] = true;
-				});
-			} else {
-				if (!input.showingComment1[index]) {
-					_slideComment(comment1, function() {
-						input.showingComment1[index] = true;
-					});
-				} else if (!input.showingComment2[index]) {
-					_slideComment(comment2, function() {
-						input.showingComment2[index] = true;
-					});
-				} else {
-					messagebox.animate({
-						opacity: 0
-					}, 500, function() {
-						comment1.hide();
-						comment2.hide();
-						input.showingMessage[index] = false;
-						input.showingComment1[index] = false;
-						input.showingComment2[index] = false;
-					});
-				}
-			}
+				}, 1000);
+			}, 500);
+
+			setTimeout(function(){
+				_slideComment(comment1);
+			}, 1750);
+
+			setTimeout(function(){
+				_slideComment(comment2);
+			}, 3000);
+		}
+
+		function _resetSpeechBubble(boxNum) {
+			var index = boxNum - 1;
+			var id = '#content-interactive-' + boxNum;
+			var messagebox = $(id + ' .message-box');
+			var comment1 = $(id + ' #comment-1');
+			var comment2 = $(id + ' #comment-2');
+
+			messagebox.css('opacity', 0);
+			comment1.hide();
+			comment2.hide();
+
+			input.showingMessage[index] = false;
 		}
 
 		function _moveRock(index, divWidth, divHeight, speed) {
@@ -146,7 +161,6 @@
 			for (var i = 1; i < 14; i ++) {
 				var rock = $('#rock-' + i);
 				rock.css('top', -divHeight * 0.5);
-				console.log(rock.css('top'));
 			}
 		}
 
@@ -156,9 +170,7 @@
 			comment.css('margin-left', 1000 * imageScale);
 			comment.animate({
 				marginLeft:	0
-			}, 1000, function() {
-				callback();
-			});
+			}, 1000);
 		}
 	}
 })();
