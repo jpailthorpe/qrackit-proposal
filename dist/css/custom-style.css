@@ -258,10 +258,6 @@ p {
 }
 
 /* Message boxes */
-.content-interactive {
-	cursor: pointer;
-}
-
 #message-col {
 	position: relative;
 }
@@ -299,7 +295,7 @@ p {
 }
 
 .question {
-	top: 2%;
+	top: 1.5%;
 }
 
 .question-background {
