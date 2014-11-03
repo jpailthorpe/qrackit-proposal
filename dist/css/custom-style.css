@@ -155,44 +155,66 @@ p {
  	top: 0px 	
 }
 
+#section0 {
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-sky2.png) no-repeat;
+	background-size: cover;
+	background-color: #fff;
+}
+
 #section1 {
-	background-color: #dcf4f7;	
+	background-color: #e3f1f6;	
 }
 
 #section2 {
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-mountains2.png) no-repeat;
+	background-size: cover;
 	background-color: #fff;
 }
 
 #section3 {
-	background-color: #dcf4f7;	
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-sky2.png) no-repeat;
+	background-size: cover;
+	background-color: #fff;
 }
 
 #section4 {
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-mountains-night2.png) no-repeat;
+	background-size: cover;
 	background-color: #fff;
+	color: #fff;
 }
 
 #section5 {
-	background-color: #dcf4f7;	
+	background-color: #e3f1f6;	
 }
 
 #section6 {
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-mountains-night2.png) no-repeat;
+	background-size: cover;
 	background-color: #fff;
+	color: #fff;
 }
 
 #section7 {
-	background-color: #dcf4f7;	
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-mountains2.png) no-repeat;
+	background-size: cover;
+	background-color: #fff;
 }
 
 #section8 {
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-sky2.png) no-repeat;
+	background-size: cover;
 	background-color: #fff;
 }
 
 #section9 {
-	background-color: #dcf4f7;	
+	background: url(http://elab.emerson.edu/qrackit-proposal/images/backgrounds/blurred-mountains2.png) no-repeat;
+	background-size: cover;
+	background-color: #fff;
 }
 
 #section10 {
-	background-color: #fff;
+	background-color: #b4eaf7;
 }
 
 .footer {
@@ -218,7 +240,7 @@ p {
 }
 
 .blue {
-	color: #98dde5;
+	color: #b4eaf7;
 	font-weight: bold;
 }
 
@@ -282,6 +304,7 @@ p {
 	padding: 1%;
 	top: 0;
 	overflow: hidden;
+	color: #000;
 }
 
 .bubble-content {
@@ -420,6 +443,10 @@ p {
 	width: 70%;
 	height: 70%;
 	left: 15%;
+}
+
+.flex-video.widescreen {
+    padding-bottom: 57.5%;
 }
 
 /* Media Queries */ 
